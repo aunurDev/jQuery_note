@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan jQuery bagian 2</title>
+    <!-- bootsrap -->
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <!-- material design bootstrap -->
+    <link rel="stylesheet" href="asset/css/mdb.min.css">
+    <link rel="stylesheet" href="asset/css/mdb.lite.min.css">
+    <!-- plugin syntaxy -->
+    <link rel="stylesheet" href="asset/css/syntaxy.dark.min.css">
+    <!-- optional style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery -->
+    <script src="asset/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="blue-grey lighten-5">
+    <div class="container mt-5">
+        <section id="header" class="jumbotron card card-image">
+            <div class="text-white text-center py-3 px-3">
+                <h2 class="card-title h1-responsive pt-3 mb-2 font-bold">
+                    <strong>LATIHAN JQUERY BAGIAN 2</strong>
+                </h2>
+                <p class="hide mx-3 mb-3">penggunaan jQuery selector</p>
+                <button href="#" class="btn btn-outline-white btn-md"><i class="fas fa-clone left"></i> Wish me
+                    luck</button>
+            </div>
+        </section>
+        <section id="main">
+            <div class="jumbotron card aqua-gradient-rgba white-text">
+                <h2 class="text-center mb-5">SELECTOR YANG DIKENAI EFEK HIDE</h2>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <h3 class="heading3 card px-3 py-3 text-center blue-text">.heading3</h3>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <h3 id="heading3" class="card px-3 py-3 text-center blue-text">#heading3</h3>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <h3 class="card px-3 py-3 text-center blue-text">h3 elemen</h3>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <h3 class="card px-3 py-3 text-center blue-text">h3 elemen</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="jumbotron card aqua-gradient-rgba white-text">
+                <h2 class="text-center mt-4 mb-5">SELECTOR YANG MEMBERI EFEK HIDE KEPADA SELECTOR LAIN</h2>
+                <div class="row">
+                    <div class="col-md-3 col-sm-4">
+                        <button href="#" class="btn1 btn btn-outline-white btn-md btn-block">
+                            <h4>*</h4>
+                        </button>
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <button href="#" class="btn2 btn btn-outline-white btn-md btn-block">
+                            <h4>elemen</h4>
+                        </button>
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <button href="#" class="btn3 btn btn-outline-white btn-md btn-block">
+                            <h4>.class</h4>
+                        </button>
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <button href="#" class="btn4 btn btn-outline-white btn-md btn-block">
+                            <h4>#id</h4>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card elegant-color white-text rounded-top">
+                <h3 class="white-text text-center px-2 mt-3">BARIS CODE</h3>
+                <hr class="hr-light mx-3">
+                <pre id="codebox" data-type="default">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <h3 class="heading3 card px-3 py-3 text-center blue-text">.heading3</h3>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h3 id="heading3" class="card px-3 py-3 text-center blue-text">#heading3</h3>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h3 class="card px-3 py-3 text-center blue-text">h3 elemen</h3>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h3 class="card px-3 py-3 text-center blue-text">h3 elemen</h3>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4">
+                            <button href="#" class="btn1 btn btn-outline-white btn-md btn-block">
+                                <h4>*</h4>
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-4">
+                            <button href="#" class="btn2 btn btn-outline-white btn-md btn-block">
+                                <h4>elemen</h4>
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-4">
+                            <button href="#" class="btn3 btn btn-outline-white btn-md btn-block">
+                                <h4>.class</h4>
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-4">
+                            <button href="#" class="btn4 btn btn-outline-white btn-md btn-block">
+                                <h4>#id</h4>
+                            </button>
+                        </div>
+                    </div>
+
+                    <script> 
+                        $(function () { 
+                            $('.btn1').click(function(){
+                                $('*').hide();
+                            })
+                            $('.btn2').click(function(){
+                                $('h3').hide();
+                            })
+                            $('.btn3').click(function(){
+                                $('.heading3').hide();
+                            })
+                            $('.btn4').click(function(){
+                                $('#heading3').hide();
+                            })
+                        })
+                    </script>
+                </pre>
+            </div>
+        </section>
+        <section id="description" class="card mb-5 mt-4 px-2 py-2">
+            <h4>kegiatan yang dilakukan pada step ini</h4>
+            <div class="bloquote bq-primary pl-3">
+                menyiapkan hirarki folder dan membuat file html <br>
+                mendownload file jQuery dan memanggilnya <br>
+                mencoba syntax dasar jQuery
+            </div>
+        </section>
+    </div>
+
+    <script src="asset/js/syntaxy.min.js"></script>
+    <script src="asset/js/mdb.min.js"></script>
+    <script src="asset/js/mdb.lite.min.js"></script>
+    <script src="asset/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#codebox').syntaxy();
+        })
+    </script>
+</body>
+
+</html>
