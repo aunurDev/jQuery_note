@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan jQuery bagian 3</title>
+    <!-- bootsrap -->
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <!-- material design bootstrap -->
+    <link rel="stylesheet" href="asset/css/mdb.min.css">
+    <link rel="stylesheet" href="asset/css/mdb.lite.min.css">
+    <!-- plugin syntaxy -->
+    <link rel="stylesheet" href="asset/css/syntaxy.purple.min.css">
+    <!-- optional style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery -->
+    <script src="asset/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="blue-grey lighten-5">
+    <div class="container mt-5">
+        <section id="header" class="jumbotron card card-image">
+            <div class="text-white text-center py-3 px-3">
+                <h2 class="card-title h1-responsive pt-3 mb-2 font-bold">
+                    <strong>LATIHAN JQUERY BAGIAN 3</strong>
+                </h2>
+                <p class="mx-3 mb-3">menggunakan fitur jQuery event</p>
+                <a href="#" class="btn btn-outline-white btn-md"><i class="fas fa-clone left"></i> Wish me luck</a>
+            </div>
+        </section>
+        <section id="main">
+            <!-- desc -->
+            <div class="card bloquote bq-primary px-5 py-4 mb-4 brown-tex text-justify">
+                <h3 class="bq-title mb-4">FITUR APA SIH JQUERY EVENT ITU?</h3>
+                <p>jadi <mark>event / event handling</mark> adlah salah satu fitur yang disediakan oleh library jQuery
+                    untuk membuat website dapat berinteraksi dengan user dengan merespon kegiatan tertentu yang
+                    dilakukan oleh user.</p>
+                <br>
+                <p>Salah satu bentuk interaksi user dengan website adalah ketika user melakukan kegiatan dengan mouse
+                    maupun keyboard contonya ketika cursor mendekati objek gambar, seketika itu gambarnya mengalami
+                    perubahan size, hover ataupun perubahan lain. <br>
+                    Keadaan-keadaan tersebut yang dapat diambil untuk dipadukan dengan fitur jQuery lainnya seperti
+                    jQuery effect atau diberi fungsi yang sesuai, hal ini biasa disebut dengan DOM (Document Object
+                    Model).
+                    Mungkin temen-temen belum ngeh dengan penjelasan singkat ini. Mari kita ulas satu persatu
+                </p><br>
+            </div>
+
+            <!-- deskripsi event mouse -->
+            <div class="card bloquote bq-success px-5 py-5 mb-5 brown-tex text-justify">
+                <h4 class="bq-title mb-3">EVENT MOUSE</h4>
+                <p>
+                    Mouse event ini diambil ketika cursor diarahkan ke elemen html tertentu, contoh umumnya adalah
+                    effect yang diterapkan ketika cursor memasuki area gambar maka ketika <mark>event</mark> tersebut
+                    sedang berlangsung, jQuery effect dapat diterapkan, salah satunya yaitu hover ketika cursor memasuki
+                    area gambar.
+                    Event lain yang diterapkan melalui interaksi mouse pada jQuery diantaranya <mark>click</mark>,
+                    <mark>dblclick</mark>, <mark>mouseenter</mark> dan <mark>mouseleave</mark> juga banyak lagi
+                    mouse event yang disediakan oleh jQuery.
+                </p><br>
+
+                <!-- sample -->
+                <div class="jumbotron card aqua-gradient-rgba white-text my-2 mb-5">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <h2 id="1mouse" class="text-center my-2 mb-5">MOUSEENTER BTN TO HIDE ME</h2>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h2 id="2mouse" class="text-center my-2 mb-5">MOUSELEAVE BTN TO HIDE ME</h2>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h2 id="3mouse" class="text-center my-2 mb-5">CLICK BTN TO HIDE <br> ME</h2>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h2 id="4mouse" class="text-center my-2 mb-5">DBLCLICK BTN TO HIDE <br> ME</h2>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button id="mouse1" class="btn blue-gradient btn-block">mouseenter</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button id="mouse2" class="btn purple-gradient btn-block">mouseleave</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button id="mouse3" class="btn peach-gradient btn-block">click</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button id="mouse4" class="btn aqua-gradient btn-block">dblclick</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <pre id="codebox" data-type="default">
+                            <script> 
+                                $(function(){
+                                    $('#mouse1').mouseenter(function(){
+                                        $('#1mouse').hide();
+                                    })
+                                    $('#mouse1').mouseleave(function(){
+                                        $('#1mouse').show();
+                                    })
+                                    $('#mouse2').mouseleave(function(){
+                                        $('#2mouse').hide();
+                                    })
+                                    $('#mouse2').mouseenter(function(){
+                                        $('#2mouse').show();
+                                    })
+                                    $('#mouse3').click(function(){
+                                        $('#3mouse').hide();
+                                    })
+                                    $('#mouse4').dblclick(function(){
+                                        $('#4mouse').hide();
+                                    })
+                                });
+                            </script>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- deskripsi event form -->
+            <div class="card bloquote bq-success px-5 py-5 mb-5 brown-tex text-justify">
+                <h4 class="bq-title mb-3">EVENT KEYBOARD</h4>
+                <p>
+                    Event keyboard merupakan fitur yang disediakan oleh jQuery untuk mendeteksi sebuah pergerakan dari
+                    keyboard.
+                    Ada bebarpa macam fungsi diantaranya yaitu <mark>keyup</mark>,
+                    <mark>keydown</mark> dan juga <mark>keypress</mark>. <br>
+                    untuk melihat perbedaan dari masing masing fungsi coba kita terapkan pada kodenya langsung.
+                </p><br>
+
+                <!-- sample -->
+                <div>
+                    <div class="row">
+                        <!-- keyup -->
+                        <div class="col-md-12 mb-3 card aqua-gradient">
+                            <div class="row">
+                                <div class="col-md-8 px-5 py-5">
+                                    <div class="row">
+                                        <h1 class="ml-2 white-text">keyup</h1>
+                                        <div class="col-md-12" style="height:50px;">
+                                            <p id="keyup_view" class="white-text text-left text-capitalize">TEXT
+                                                HERE</p>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input id="keyup_entry" class="form-control" type="text"
+                                                placeholder="Entry">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button id="keyup_btn" class="btn blue-gradient btn-sm">Trigger</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 pr-5 py-5">
+                                    <h5 class="white-text text-left">menangkap setiap kali keyboard ditekan
+                                        <strong>tepat 1
+                                            tombol</strong>
+                                    </h5>
+                                    <h5 class="white-text text-left">menangkap karakter abjad, spesial karakter
+                                        dan juga tombol perintah seperti backspace</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- keydown -->
+                        <div class="col-md-12 mb-3 card aqua-gradient">
+                            <div class="row">
+                                <div class="col-md-8 px-5 py-5">
+                                    <div class="row">
+                                        <h1 class="ml-2 white-text">keydown</h1>
+                                        <div class="col-md-12" style="height:50px;">
+                                            <p id="keydown_view" class="white-text text-left text-capitalize">TEXT
+                                                HERE</p>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input id="keydown_entry" class="form-control" type="text"
+                                                placeholder="Entry">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button id="keydown_btn" class="btn blue-gradient btn-sm">Trigger</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 pr-5 py-5">
+                                    <h5 class="white-text text-left">menangkap setiap kali keyboard ditekan
+                                        <strong>terlambat 1 tombol</strong>
+                                    </h5>
+                                    <h5 class="white-text text-left">menangkap karakter abjad, spesial karakter
+                                        dan juga tombol perintah seperti backspace, capslock dan juga yang lain,
+                                        <strong>terlambat 1 tombol</strong>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- keypress -->
+                        <div class="col-md-12 mb-3 card aqua-gradient">
+                            <div class="row">
+                                <div class="col-md-8 px-5 py-5">
+                                    <div class="row">
+                                        <h1 class="ml-2 white-text">keypress</h1>
+                                        <div class="col-md-12" style="height:50px;">
+                                            <p id="keypress_view" class="white-text text-left text-capitalize">TEXT
+                                                HERE</p>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <input id="keypress_entry" class="form-control" type="text"
+                                                placeholder="Entry">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button id="keypress_btn" class="btn blue-gradient btn-sm">Trigger</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 pr-5 py-5">
+                                    <h5 class="white-text text-left">menangkap setiap kali keyboard ditekan
+                                        <strong>terlambat 1 tombol</strong>
+                                    </h5>
+                                    <h5 class="white-text text-left">menangkap karakter abjad, spesial karakter
+                                        namun <strong>tidak menangkap</strong> tipe perintah seperti backspace, capslock
+                                        atau yang lain
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <pre id="keyboard" data-type="default">
+                            <script> 
+                                $(function(){
+                                    // keyup
+                                    $("#keyup_entry").keyup(function(){
+                                        var inputan = $(this).val();
+                                        $('#keyup_view').text(inputan);
+                                    });
+
+                                    $("#keyup_btn").click(function () {
+                                        var inputan = $('#keyup_entry').val();
+                                        alert(inputan);
+                                    });
+
+                                    // keydown
+                                    $("#keydown_entry").keydown(function () {
+                                        var inputan = $(this).val();
+                                        $('#keydown_view').text(inputan);
+                                    });
+
+                                    $("#keydown_btn").click(function () {
+                                        var inputan = $('#keydown_entry').val();
+                                        alert(inputan);
+                                    });
+
+                                    // keypress
+                                    $("#keypress_entry").keypress(function () {
+                                        var inputan = $(this).val();
+                                        $('#keypress_view').text(inputan);
+                                    });
+
+                                    $("#keypress_btn").click(function () {
+                                        var inputan = $('#keypres_entry').val();
+                                        alert(inputan);
+                                    });
+                                });
+                            </script>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- deskripsi event mouse -->
+            <div class="card bloquote bq-success px-5 py-5 mb-5 brown-tex text-justify">
+                <h4 class="bq-title mb-3">EVENT FORM</h4>
+                <!-- blur -->
+                <div class="col-md-12 mb-3 card aqua-gradient">
+                    <div class="row">
+                        <div class="col-md-6 px-5 py-5">
+                            <h1 class="ml-2 white-text">blur</h1> <br>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input id="blur_entry" class="form-control mb-2" type="text" placeholder="Entry">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pr-5 py-5">
+                            <h5 class="white-text text-left">form blur merupakan fungsi untuk mencari momen ketika
+                                pointer keluar dari form.
+                            </h5>
+                            <h5 class="white-text text-left">kondisi blur akan terdeteksi jika form terselect terlebih
+                                dulu dan keluar dari form yang dikenai fungsi blur().
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- focus -->
+                <div class="col-md-12 mb-3 card aqua-gradient">
+                    <div class="row">
+                        <div class="col-md-8 px-5 py-5">
+                            <h1 class="ml-2 white-text">focus</h1> <br>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <input id="focus_entry" class="form-control mb-2" type="text" placeholder="Entry"
+                                        value="form kosong">
+                                </div>
+                                <div class="col-md-2">
+                                    <button id="focus_btn" class="btn btn-sm blue-gradient">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pr-5 pt-5">
+                            <h5 class="white-text text-left mt-5">fungsi focus kebalikan dari blur, yaitu event ketika
+                                pointer masuk kedalam form.
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-12">
+                    <pre id="form" data-type="default">
+                        <script> 
+                            $(function(){   
+                                // blur
+                                $('#blur_entry').blur(function(){
+                                    alert('blur dectected');
+                                });
+                                // focus
+                                $('#focus_btn').click(function(){
+                                    $('#focus_entry').focus();
+                                    $('#focus_entry').addClass('is-invalid');
+                                    $('#focus_entry').val('Username terlah terdaftar');
+                                });
+                            });
+                        </script>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <script src="asset/js/syntaxy.min.js"></script>
+    <script src="asset/js/mdb.min.js"></script>
+    <script src="asset/js/mdb.lite.min.js"></script>
+    <script src="asset/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#codebox').syntaxy();
+            $('#keyboard').syntaxy();
+            $('#form').syntaxy();
+        })
+    </script>
+</body>
+
+</html>

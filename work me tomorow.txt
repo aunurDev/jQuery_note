@@ -1,0 +1,11 @@
+buat progam sederhana jquery change
+1.buat rangkaian form select buah buahan
+2.buat form input readonly untuk menampung value dari select
+3.buat fungsi
+-apabila select dirubah maka form input akan terisi sesuai attribut dari form yang disleksi
+-atribut yang dipakai : jumlah/kg harga/rp
+
+buat progam sederhana jquery select
+1.buat rangkaian form input value "silahkan seleksi aku"
+2.ambil hasil seleksi
+3.print berupa paragraf diatas form
