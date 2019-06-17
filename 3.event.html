@@ -64,16 +64,16 @@
                 <!-- sample -->
                 <div class="jumbotron card aqua-gradient-rgba white-text my-2 mb-5">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6">
+                        <div class="text-box col-md-3 col-sm-6">
                             <h2 id="1mouse" class="text-center my-2 mb-5">MOUSEENTER BTN TO HIDE ME</h2>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div class="text-box col-md-3 col-sm-6">
                             <h2 id="2mouse" class="text-center my-2 mb-5">MOUSELEAVE BTN TO HIDE ME</h2>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div class="text-box col-md-3 col-sm-6">
                             <h2 id="3mouse" class="text-center my-2 mb-5">CLICK BTN TO HIDE <br> ME</h2>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+                        <div class="text-box col-md-3 col-sm-6">
                             <h2 id="4mouse" class="text-center my-2 mb-5">DBLCLICK BTN TO HIDE <br> ME</h2>
                         </div>
                     </div>
@@ -149,8 +149,10 @@
                                                 HERE</p>
                                         </div>
                                         <div class="col-md-9">
-                                            <input id="keyup_entry" class="form-control" type="text"
+                                            <input id="keyup_entry" class="form-control mb-2" type="text"
                                                 placeholder="Entry">
+                                            <input id="keyup_entry2" class="form-control" type="text"
+                                                placeholder="Deteksi dengan alert">
                                         </div>
                                         <div class="col-md-3">
                                             <button id="keyup_btn" class="btn blue-gradient btn-sm">Trigger</button>
@@ -158,12 +160,9 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4 pr-5 py-5">
-                                    <h5 class="white-text text-left">menangkap setiap kali keyboard ditekan
-                                        <strong>tepat 1
-                                            tombol</strong>
-                                    </h5>
-                                    <h5 class="white-text text-left">menangkap karakter abjad, spesial karakter
-                                        dan juga tombol perintah seperti backspace</h5>
+                                    <h5 class="white-text text-left">menangkap key ketika tombol diangkat, coba tekan
+                                        terus 1 tombol maka akan terbaca ketika tombol diangkat.</h5>
+                                    <h5 class="white-text text-left">menangkap seluruh key keyboard yang ditekan</h5>
                                 </div>
                             </div>
                         </div>
@@ -171,7 +170,7 @@
                         <!-- keydown -->
                         <div class="col-md-12 mb-3 card aqua-gradient">
                             <div class="row">
-                                <div class="col-md-8 px-5 py-5">
+                                <div class="col-md-6 px-5 py-5">
                                     <div class="row">
                                         <h1 class="ml-2 white-text">keydown</h1>
                                         <div class="col-md-12" style="height:50px;">
@@ -179,22 +178,26 @@
                                                 HERE</p>
                                         </div>
                                         <div class="col-md-9">
-                                            <input id="keydown_entry" class="form-control" type="text"
+                                            <input id="keydown_entry" class="form-control mb-2" type="text"
                                                 placeholder="Entry">
+                                            <input id="keydown_entry2" class="form-control" type="text"
+                                                placeholder="Deteksi dengan alert">
                                         </div>
                                         <div class="col-md-3">
                                             <button id="keydown_btn" class="btn blue-gradient btn-sm">Trigger</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 pr-5 py-5">
-                                    <h5 class="white-text text-left">menangkap setiap kali keyboard ditekan
-                                        <strong>terlambat 1 tombol</strong>
-                                    </h5>
-                                    <h5 class="white-text text-left">menangkap karakter abjad, spesial karakter
-                                        dan juga tombol perintah seperti backspace, capslock dan juga yang lain,
-                                        <strong>terlambat 1 tombol</strong>
-                                    </h5>
+                                <div class="col-md-6 pr-5 py-5">
+                                    <h5 class="white-text text-left">menangkap tombol ketika ditekan atau dalam posisi
+                                        tombol kebawah, tidak dapat mendeteksi tombol yang akan ditekan secara terus
+                                        menerus.
+                                        <h5 class="white-text text-left">menangkap tombol selanjutnya.
+                                        </h5>
+                                        <h5 class="white-text text-left">menangkap karakter abjad, spesial karakter
+                                            dan juga tombol perintah seperti TAB, sehingga ketika berpindah form dengan
+                                            tombol TAB key yang ditekan dalam posisi (-1)
+                                        </h5>
                                 </div>
                             </div>
                         </div>
@@ -202,7 +205,7 @@
                         <!-- keypress -->
                         <div class="col-md-12 mb-3 card aqua-gradient">
                             <div class="row">
-                                <div class="col-md-8 px-5 py-5">
+                                <div class="col-md-6 px-5 py-5">
                                     <div class="row">
                                         <h1 class="ml-2 white-text">keypress</h1>
                                         <div class="col-md-12" style="height:50px;">
@@ -210,21 +213,25 @@
                                                 HERE</p>
                                         </div>
                                         <div class="col-md-9">
-                                            <input id="keypress_entry" class="form-control" type="text"
+                                            <input id="keypress_entry" class="form-control mb-2" type="text"
                                                 placeholder="Entry">
+                                            <input id="keypress_entry2" class="form-control" type="text"
+                                                placeholder="Deteksi dengan alert">
                                         </div>
                                         <div class="col-md-3">
                                             <button id="keypress_btn" class="btn blue-gradient btn-sm">Trigger</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 pr-5 py-5">
-                                    <h5 class="white-text text-left">menangkap setiap kali keyboard ditekan
-                                        <strong>terlambat 1 tombol</strong>
+                                <div class="col-md-6 pr-5 py-5">
+                                    <h5 class="white-text text-left">menangkap tombol ketika dalam keadaan dan turun
+                                        menangkap tombol selanjutnya sama dengan fungsi keydown.
                                     </h5>
                                     <h5 class="white-text text-left">menangkap karakter abjad, spesial karakter
-                                        namun <strong>tidak menangkap</strong> tipe perintah seperti backspace, capslock
-                                        atau yang lain
+                                        namun <strong>tidak menangkap</strong> tipe perintah seperti
+                                        <strong>TAB</strong>,
+                                        sehingga ketika menekan tab untuk berpindah form posisi key yang tertangkap
+                                        (-2).
                                     </h5>
                                 </div>
                             </div>
@@ -251,7 +258,10 @@
                                         var inputan = $(this).val();
                                         $('#keyup_view').text(inputan);
                                     });
-
+                                    $("#keyup_entry2").keyup(function(){
+                                        var inputan = $(this).val();
+                                        alert(inputan);
+                                    });
                                     $("#keyup_btn").click(function () {
                                         var inputan = $('#keyup_entry').val();
                                         alert(inputan);
@@ -262,7 +272,10 @@
                                         var inputan = $(this).val();
                                         $('#keydown_view').text(inputan);
                                     });
-
+                                    $("#keydown_entry2").keydown(function () {
+                                        var inputan = $(this).val();
+                                        alert(inputan);
+                                    });
                                     $("#keydown_btn").click(function () {
                                         var inputan = $('#keydown_entry').val();
                                         alert(inputan);
@@ -273,7 +286,10 @@
                                         var inputan = $(this).val();
                                         $('#keypress_view').text(inputan);
                                     });
-
+                                    $("#keypress_entry2").keypress(function () {
+                                        var inputan = $(this).val();
+                                        alert(inputan);
+                                    });
                                     $("#keypress_btn").click(function () {
                                         var inputan = $('#keypres_entry').val();
                                         alert(inputan);
@@ -292,7 +308,10 @@
                 <div class="col-md-12 mb-3 card aqua-gradient">
                     <div class="row">
                         <div class="col-md-6 px-5 py-5">
-                            <h1 class="ml-2 white-text">blur</h1> <br>
+                            <h1 class="ml-1 white-text">blur</h1>
+                            <p class="white-text text-lef"> keluarkan pointer dari fom |
+                                <strong id="blur_text">Non blur</strong>
+                            </p>
                             <div class="row">
                                 <div class="col-md-12">
                                     <input id="blur_entry" class="form-control mb-2" type="text" placeholder="Entry">
@@ -310,15 +329,41 @@
                     </div>
                 </div>
 
+                <!-- select -->
+                <div class="col-md-12 mb-3 card aqua-gradient">
+                    <div class="row">
+                        <div class="col-md-8 px-5 py-5">
+                            <h1 class="ml-1 white-text">select</h1>
+                            <p class="white-text text-left">block text yang ada pada form |
+                                <strong id="select_text">Non select</strong>
+                            </p>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input id="select_entry" class="form-control mb-2" type="text"
+                                        value="select text yang berada pada form">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pr-5 pt-5">
+                            <h5 class="white-text text-left mt-5">fungsi select disini untuk mendeteksi ketika ada
+                                elemen html yang terseleksi.
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- focus -->
                 <div class="col-md-12 mb-3 card aqua-gradient">
                     <div class="row">
                         <div class="col-md-8 px-5 py-5">
-                            <h1 class="ml-2 white-text">focus</h1> <br>
+                            <h1 class="ml-1 white-text">focus</h1>
+                            <p class="white-text text-left">masukkan pointer kedalam form |
+                                <strong id="focus_text">Non focus</strong>
+                            </p>
                             <div class="row">
                                 <div class="col-md-10">
-                                    <input id="focus_entry" class="form-control mb-2" type="text" placeholder="Entry"
-                                        value="form kosong">
+                                    <input id="focus_entry" class="form-control mb-2" type="text"
+                                        placeholder="masukkan username">
                                 </div>
                                 <div class="col-md-2">
                                     <button id="focus_btn" class="btn btn-sm blue-gradient">Submit</button>
@@ -332,20 +377,50 @@
                         </div>
                     </div>
                 </div>
-                
+
+
+
                 <div class="col-md-12">
                     <pre id="form" data-type="default">
                         <script> 
                             $(function(){   
                                 // blur
-                                $('#blur_entry').blur(function(){
-                                    alert('blur dectected');
+                                $('#blur_entry').on({
+                                    blur:function(){
+                                        $('#blur_text').text('Blur');
+                                    },
+                                    focus:function(){
+                                        $('#blur_text').text('Non blur');
+                                    }
+                                });
+                                 // select
+                                $('#select_entry').on({
+                                    select: function () {
+                                        $('#select_text').text('Selected');
+                                    },
+                                    blur: function () {
+                                        $('#select_text').text('Non select');
+                                        $('#select_entry').val('select text yang berada pada form');
+                                    }
                                 });
                                 // focus
+                                $('#focus_entry').on({
+                                    focus:function(){
+                                        $('#focus_text').text('Focus');
+                                    },
+                                    blur:function(){
+                                        $('#focus_text').text('Non focus');
+                                    }
+                                });
+
                                 $('#focus_btn').click(function(){
-                                    $('#focus_entry').focus();
+                                    $('#focus_entry').focus(); 
                                     $('#focus_entry').addClass('is-invalid');
-                                    $('#focus_entry').val('Username terlah terdaftar');
+                                    $('#focus_entry').val('username telah terdaftar');
+                                    $('#focus_entry').blur(function(){
+                                    $('#focus_entry').removeClass('is-invalid');
+                                    $('#focus_entry').val('');
+                                    });
                                 });
                             });
                         </script>

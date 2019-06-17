@@ -2,3 +2,8 @@
 #header {
     background-image: url(asset/images/bgheader.jpg);
 }
+
+div.text-box {
+    height: 180px;
+    width: 80px;
+}
