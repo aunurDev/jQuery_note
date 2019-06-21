@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Latihan jQuery bagian 3</title>
+    <title>Latihan jQuery bagian 4</title>
     <!-- bootsrap -->
     <link rel="stylesheet" href="asset/css/bootstrap.min.css">
     <!-- material design bootstrap -->
@@ -30,28 +30,128 @@
         <section id="header" class="jumbotron card card-image">
             <div class="text-white text-center py-3 px-3">
                 <h2 class="card-title h1-responsive pt-3 mb-2 font-bold">
-                    <strong>LATIHAN JQUERY BAGIAN 3</strong>
+                    <strong>LATIHAN JQUERY BAGIAN 4</strong>
                 </h2>
-                <p class="mx-3 mb-3">menggunakan fitur jQuery event</p>
+                <p class="mx-3 mb-3">menggunakan fitur jQuery effect</p>
                 <a href="#" class="btn btn-outline-white btn-md"><i class="fas fa-clone left"></i> Wish me luck</a>
             </div>
         </section>
         <section id="main">
             <!-- desc -->
             <div class="card bloquote bq-primary px-5 py-4 mb-4 brown-tex text-justify">
-                <h3 class="bq-title mb-4">FITUR APA SIH JQUERY EVENT ITU?</h3>
-                <p>jadi <mark>event / event handling</mark> adlah salah satu fitur yang disediakan oleh library jQuery
-                    untuk membuat website dapat berinteraksi dengan user dengan merespon kegiatan tertentu yang
-                    dilakukan oleh user.</p>
+                <h3 class="bq-title mb-4">FITUR APA SIH JQUERY EFFECT ITU?</h3>
+                <p>Dalam penerapan jQuery event kemarin kita sebenarnya sudah menerapkan jQuery effect yaitu hide().
+                    Namun pada section ini
+                    kita akan mencoba semua effect yang disediakan oleh jQUery.
+                </p>
                 <br>
-                <p>Salah satu bentuk interaksi user dengan website adalah ketika user melakukan kegiatan dengan mouse
-                    maupun keyboard contonya ketika cursor mendekati objek gambar, seketika itu gambarnya mengalami
-                    perubahan size, hover ataupun perubahan lain. <br>
-                    Keadaan-keadaan tersebut yang dapat diambil untuk dipadukan dengan fitur jQuery lainnya seperti
-                    jQuery effect atau diberi fungsi yang sesuai, hal ini biasa disebut dengan DOM (Document Object
-                    Model).
-                    Mungkin temen-temen belum ngeh dengan penjelasan singkat ini. Mari kita ulas satu persatu
+                <p>
+                    jQuery effect sendiri dapat digunakan ketika suatu event terjadi. Misalnya ketika suatu button di
+                    click maka effect dapat diterapkan kepada target tertentu.
                 </p><br>
+                <p>Nah effect yang disediakan oleh jQuery sendiri ada 17 method yang dibagi menjadi empat menurut
+                    kategorinya.</p>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <table class="table text-center">
+                            <tr>
+                                <th>BASIC</th>
+                            </tr>
+                            <tr>
+                                <td>.hide()</td>
+                            </tr>
+                            <tr>
+                                <td>.show()</td>
+                            </tr>
+                            <tr>
+                                <td>.togg()</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <table class="table text-center">
+                            <tr>
+                                <th>BASIC</th>
+                            </tr>
+                            <tr>
+                                <td>.animate()</td>
+                            </tr>
+                            <tr>
+                                <td>.clearQueue()</td>
+                            </tr>
+                            <tr>
+                                <td>.delay()</td>
+                            </tr>
+                            <tr>
+                                <td>.dequeue()</td>
+                            </tr>
+                            <tr>
+                                <td>.finish()</td>
+                            </tr>
+                            <tr>
+                                <td>jQuery.fx.interval()</td>
+                            </tr>
+                            <tr>
+                                <td>jQuery.fx.off()</td>
+                            </tr>
+                            <tr>
+                                <td>jQuery.speed()</td>
+                            </tr>
+                            <tr>
+                                <td>.queue()</td>
+                            </tr>
+                            <tr>
+                                <td>.stop()</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <table class="table">
+                            <tr>
+                                <th>FADING</th>
+                            </tr>
+                            <tr>
+                                <td>.fedeIn()</td>
+                            </tr>
+                            <tr>
+                                <td>.fadeOut()</td>
+                            </tr>
+                            <tr>
+                                <td>.fadeTo()</td>
+                            </tr>
+                            <tr>
+                                <td>.fadeToggle()</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <table class="table">
+                            <tr>
+                                <th>SLIDING</th>
+                            </tr>
+                            <tr>
+                                <td>.slideDown()</td>
+                            </tr>
+                            <tr>
+                                <td>.slideToggle()</td>
+                            </tr>
+                            <tr>
+                                <td>.slideUp()</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- endrow -->
+                <div class="col-md-3 col-sm-6">
+
+                </div>
+                <div class="col-md-3 col-sm-6">
+
+                </div>
             </div>
 
             <!-- deskripsi event mouse -->
