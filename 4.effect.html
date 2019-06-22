@@ -55,7 +55,7 @@
                     <div class="col-md-3 col-sm-6">
                         <table class="table text-center">
                             <tr>
-                                <th>BASIC</th>
+                                <th>BASSIC</th>
                             </tr>
                             <tr>
                                 <td>.hide()</td>
@@ -64,7 +64,7 @@
                                 <td>.show()</td>
                             </tr>
                             <tr>
-                                <td>.togg()</td>
+                                <td>.toggle()</td>
                             </tr>
                         </table>
                     </div>
@@ -72,7 +72,7 @@
                     <div class="col-md-3 col-sm-6">
                         <table class="table text-center">
                             <tr>
-                                <th>BASIC</th>
+                                <th>CUSTOM</th>
                             </tr>
                             <tr>
                                 <td>.animate()</td>
@@ -154,389 +154,189 @@
                 </div>
             </div>
 
-            <!-- deskripsi event mouse -->
+            <!-- bassic -->
             <div class="card bloquote bq-success px-5 py-5 mb-5 brown-tex text-justify">
-                <h4 class="bq-title mb-3">EVENT MOUSE</h4>
-                <p>
-                    Mouse event ini diambil ketika cursor diarahkan ke elemen html tertentu, contoh umumnya adalah
-                    effect yang diterapkan ketika cursor memasuki area gambar maka ketika <mark>event</mark> tersebut
-                    sedang berlangsung, jQuery effect dapat diterapkan, salah satunya yaitu hover ketika cursor memasuki
-                    area gambar.
-                    Event lain yang diterapkan melalui interaksi mouse pada jQuery diantaranya <mark>click</mark>,
-                    <mark>dblclick</mark>, <mark>mouseenter</mark> dan <mark>mouseleave</mark> juga banyak lagi
-                    mouse event yang disediakan oleh jQuery.
-                </p><br>
+                <h4 class="bq-title mb-3">BASSIC EFFECT</h4>
+                <p>Pada kategori <mark>bassic</mark> diantaranya berfungsi untuk menyembunyikan, menampilkan dan
+                    gabungan
+                    dari kedua effect. Mari kita coba fungsi dibawah ini, coba click button dibawah untuk eventnya dan
+                    penerapan effect pada text.</p>
 
-                <!-- sample -->
-                <div class="jumbotron card aqua-gradient-rgba white-text my-2 mb-5">
-                    <div class="row">
-                        <div class="text-box col-md-3 col-sm-6">
-                            <h2 id="1mouse" class="text-center my-2 mb-5">MOUSEENTER BTN TO HIDE ME</h2>
+                <!-- bassic 1 display -->
+                <div class="jumbotron card aqua-gradient-rgba white-text mt-2">
+
+                    <!-- row sample effect bassic 1 -->
+                    <div class="row text-center">
+                        <div class="col-md-4 text-box">
+                            <h3 id="hide_heading" class="my-3">HIDE ME!</h3>
+                            <p id="hide_text" class="mb-5">click button hide untuk <br>
+                                <strong>menyembunyikan</strong> text</p>
                         </div>
-                        <div class="text-box col-md-3 col-sm-6">
-                            <h2 id="2mouse" class="text-center my-2 mb-5">MOUSELEAVE BTN TO HIDE ME</h2>
+                        <div class="col-md-4 text-box">
+                            <h3 id="show_heading" class="my-3">HAVE SHOWED!</h3>
+                            <p id="show_text" class="mb-5">click button show untuk <br> <strong>memunculkan</strong>
+                                text</p>
                         </div>
-                        <div class="text-box col-md-3 col-sm-6">
-                            <h2 id="3mouse" class="text-center my-2 mb-5">CLICK BTN TO HIDE <br> ME</h2>
-                        </div>
-                        <div class="text-box col-md-3 col-sm-6">
-                            <h2 id="4mouse" class="text-center my-2 mb-5">DBLCLICK BTN TO HIDE <br> ME</h2>
+                        <div class="col-md-4 text-box">
+                            <h3 id="toggle_heading" class="my-3">TOGGLE ME!</h3>
+                            <p id="toggle_text" class="mb-5">click button hide untuk <br> <strong>munculkan &
+                                    sembunyikan</strong></p>
                         </div>
                     </div>
+                    <!-- /row sample effect bassic 1 -->
 
+                    <!-- row sample ivent bassic 1 -->
                     <div class="row">
-                        <div class="col-md-3">
-                            <button id="mouse1" class="btn blue-gradient btn-block">mouseenter</button>
+                        <div class="col-md-4">
+                            <button id="hide_btn" class="btn blue-gradient btn-block">hide</button>
                         </div>
-                        <div class="col-md-3">
-                            <button id="mouse2" class="btn purple-gradient btn-block">mouseleave</button>
+                        <div class="col-md-4">
+                            <button id="show_btn" class="btn purple-gradient btn-block">show</button>
                         </div>
-                        <div class="col-md-3">
-                            <button id="mouse3" class="btn peach-gradient btn-block">click</button>
-                        </div>
-                        <div class="col-md-3">
-                            <button id="mouse4" class="btn aqua-gradient btn-block">dblclick</button>
+                        <div class="col-md-4">
+                            <button id="toggle_btn" class="btn peach-gradient btn-block">toggle</button>
                         </div>
                     </div>
+                    <!-- /row sample ivent bassic 1 -->
                 </div>
+                <!-- /bassic 1 display -->
 
+                <!-- bassic 1 jquery-->
                 <div class="row">
                     <div class="col-md-12">
-                        <pre id="codebox" data-type="default">
+                        <pre id="bassic" data-type="default">
                             <script> 
                                 $(document).ready(function(){
                                     $('.preloader').fadeOut();
+                                    $('#show_heading').hide(); //sembunyikan text untuk mencoba fungsi show
                                 });
                                 
                                 $(function(){
-                                    $('#mouse1').mouseenter(function(){
-                                        $('#1mouse').hide();
+                                    $('#hide_btn').click(function(){
+                                        $('#hide_heading').hide();
+                                        $('#hide_text').text('NICE!');
                                     })
-                                    $('#mouse1').mouseleave(function(){
-                                        $('#1mouse').show();
+                                    $('#show_btn').click(function(){
+                                        $('#show_heading').show();
+                                        $('#show_text').text('GREET!');
                                     })
-                                    $('#mouse2').mouseleave(function(){
-                                        $('#2mouse').hide();
-                                    })
-                                    $('#mouse2').mouseenter(function(){
-                                        $('#2mouse').show();
-                                    })
-                                    $('#mouse3').click(function(){
-                                        $('#3mouse').hide();
-                                    })
-                                    $('#mouse4').dblclick(function(){
-                                        $('#4mouse').hide();
-                                    })
+                                    $('#toggle_btn').click(function(){
+                                        $('#toggle_heading').toggle();
+                                        $('#toggle_text').text('GOOD JOB! repeatme');
+                                    });
                                 });
                             </script>
                         </pre>
                     </div>
                 </div>
-            </div>
+                <!-- /basic 1 jquery -->
 
-            <!-- deskripsi event form -->
-            <div class="card bloquote bq-success px-5 py-5 mb-5 brown-tex text-justify">
-                <h4 class="bq-title mb-3">EVENT KEYBOARD</h4>
-                <p>
-                    Event keyboard merupakan fitur yang disediakan oleh jQuery untuk mendeteksi sebuah pergerakan dari
-                    keyboard.
-                    Ada bebarpa macam fungsi diantaranya yaitu <mark>keyup</mark>,
-                    <mark>keydown</mark> dan juga <mark>keypress</mark>. <br>
-                    untuk melihat perbedaan dari masing masing fungsi coba kita terapkan pada kodenya langsung.
-                </p><br>
-
-                <!-- sample -->
-                <div>
-                    <div class="row">
-                        <!-- keyup -->
-                        <div class="col-md-12 mb-3 card aqua-gradient">
-                            <div class="row">
-                                <div class="col-md-8 px-5 py-5">
-                                    <div class="row">
-                                        <h1 class="ml-2 white-text">keyup</h1>
-                                        <div class="col-md-12" style="height:50px;">
-                                            <p id="keyup_view" class="white-text text-left text-capitalize">TEXT
-                                                HERE</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <input id="keyup_entry" class="form-control mb-2" type="text"
-                                                placeholder="Entry">
-                                            <input id="keyup_entry2" class="form-control" type="text"
-                                                placeholder="Deteksi dengan alert">
-                                        </div>
-                                        <div class="col-md-3">
-                                            <button id="keyup_btn" class="btn blue-gradient btn-sm">Trigger</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 pr-5 py-5">
-                                    <h5 class="white-text text-left">menangkap key ketika tombol diangkat, coba tekan
-                                        terus 1 tombol maka akan terbaca ketika tombol diangkat.</h5>
-                                    <h5 class="white-text text-left">menangkap seluruh key keyboard yang ditekan</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- keydown -->
-                        <div class="col-md-12 mb-3 card aqua-gradient">
-                            <div class="row">
-                                <div class="col-md-6 px-5 py-5">
-                                    <div class="row">
-                                        <h1 class="ml-2 white-text">keydown</h1>
-                                        <div class="col-md-12" style="height:50px;">
-                                            <p id="keydown_view" class="white-text text-left text-capitalize">TEXT
-                                                HERE</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <input id="keydown_entry" class="form-control mb-2" type="text"
-                                                placeholder="Entry">
-                                            <input id="keydown_entry2" class="form-control" type="text"
-                                                placeholder="Deteksi dengan alert">
-                                        </div>
-                                        <div class="col-md-3">
-                                            <button id="keydown_btn" class="btn blue-gradient btn-sm">Trigger</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 pr-5 py-5">
-                                    <h5 class="white-text text-left">menangkap tombol ketika ditekan atau dalam posisi
-                                        tombol kebawah, tidak dapat mendeteksi tombol yang akan ditekan secara terus
-                                        menerus.
-                                        <h5 class="white-text text-left">menangkap tombol selanjutnya.
-                                        </h5>
-                                        <h5 class="white-text text-left">menangkap karakter abjad, spesial karakter
-                                            dan juga tombol perintah seperti TAB, sehingga ketika berpindah form dengan
-                                            tombol TAB key yang ditekan dalam posisi (-1)
-                                        </h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- keypress -->
-                        <div class="col-md-12 mb-3 card aqua-gradient">
-                            <div class="row">
-                                <div class="col-md-6 px-5 py-5">
-                                    <div class="row">
-                                        <h1 class="ml-2 white-text">keypress</h1>
-                                        <div class="col-md-12" style="height:50px;">
-                                            <p id="keypress_view" class="white-text text-left text-capitalize">TEXT
-                                                HERE</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <input id="keypress_entry" class="form-control mb-2" type="text"
-                                                placeholder="Entry">
-                                            <input id="keypress_entry2" class="form-control" type="text"
-                                                placeholder="Deteksi dengan alert">
-                                        </div>
-                                        <div class="col-md-3">
-                                            <button id="keypress_btn" class="btn blue-gradient btn-sm">Trigger</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 pr-5 py-5">
-                                    <h5 class="white-text text-left">menangkap tombol ketika dalam keadaan dan turun
-                                        menangkap tombol selanjutnya sama dengan fungsi keydown.
-                                    </h5>
-                                    <h5 class="white-text text-left">menangkap karakter abjad, spesial karakter
-                                        namun <strong>tidak menangkap</strong> tipe perintah seperti
-                                        <strong>TAB</strong>,
-                                        sehingga ketika menekan tab untuk berpindah form posisi key yang tertangkap
-                                        (-2).
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12">
-
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row mt-5">
+                <!-- bassic 2 -->
+                <div class="row my-5">
                     <div class="col-md-12">
-                        <pre id="keyboard" data-type="default">
-                            <script> 
-                                $(function(){
-                                    // keyup
-                                    $("#keyup_entry").keyup(function(){
-                                        var inputan = $(this).val();
-                                        $('#keyup_view').text(inputan);
-                                    });
-                                    $("#keyup_entry2").keyup(function(){
-                                        var inputan = $(this).val();
-                                        alert(inputan);
-                                    });
-                                    $("#keyup_btn").click(function () {
-                                        var inputan = $('#keyup_entry').val();
-                                        alert(inputan);
-                                    });
+                        <p>
+                            Nah selanjutnya kita bahas <mark>parameter</mark> apa saja yang dapat digunakan
+                            dalam
+                            function bassic diatas.
+                            Untuk eksperimen kali ini kita hanya mengambil fungsi .toggle() saja.
+                        </p> <br>
 
-                                    // keydown
-                                    $("#keydown_entry").keydown(function () {
-                                        var inputan = $(this).val();
-                                        $('#keydown_view').text(inputan);
-                                    });
-                                    $("#keydown_entry2").keydown(function () {
-                                        var inputan = $(this).val();
-                                        alert(inputan);
-                                    });
-                                    $("#keydown_btn").click(function () {
-                                        var inputan = $('#keydown_entry').val();
-                                        alert(inputan);
-                                    });
-
-                                    // keypress
-                                    $("#keypress_entry").keypress(function () {
-                                        var inputan = $(this).val();
-                                        $('#keypress_view').text(inputan);
-                                    });
-                                    $("#keypress_entry2").keypress(function () {
-                                        var inputan = $(this).val();
-                                        alert(inputan);
-                                    });
-                                    $("#keypress_btn").click(function () {
-                                        var inputan = $('#keypres_entry').val();
-                                        alert(inputan);
-                                    });
-                                });
-                            </script>
-                        </pre>
-                    </div>
-                </div>
-            </div>
-
-            <!-- deskripsi event mouse -->
-            <div class="card bloquote bq-success px-5 py-5 mb-5 brown-tex text-justify">
-                <h4 class="bq-title mb-3">EVENT FORM</h4>
-                <!-- blur -->
-                <div class="col-md-12 mb-3 card aqua-gradient">
-                    <div class="row">
-                        <div class="col-md-6 px-5 py-5">
-                            <h1 class="ml-1 white-text">blur</h1>
-                            <p class="white-text text-lef"> keluarkan pointer dari fom |
-                                <strong id="blur_text">Non blur</strong>
-                            </p>
+                        <div class="note note-primary mb-2">
                             <div class="row">
-                                <div class="col-md-12">
-                                    <input id="blur_entry" class="form-control mb-2" type="text" placeholder="Entry">
+                                <div class="col-sm-6 text-left">
+                                    <h4 class="text-left mx-2">
+                                        .toggle();
+                                    </h4>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <h6 class="pt-2 mx-2">tersedia mulai dari versi 1.0</h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 pr-5 py-5">
-                            <h5 class="white-text text-left">form blur merupakan fungsi untuk mencari momen ketika
-                                pointer keluar dari form.
-                            </h5>
-                            <h5 class="white-text text-left">kondisi blur akan terdeteksi jika form terselect terlebih
-                                dulu dan keluar dari form yang dikenai fungsi blur().
-                            </h5>
-                        </div>
-                    </div>
-                </div>
+                        <p>Fungsi ini merupakan standard dari jQuery dan tidak memerlukan parameter karna sudah
+                            mempunyai default.
+                            fungsi ini telah kita terapkan pada contoh sebelumnya.
+                        </p>
 
-                <!-- select -->
-                <div class="col-md-12 mb-3 card aqua-gradient">
-                    <div class="row">
-                        <div class="col-md-8 px-5 py-5">
-                            <h1 class="ml-1 white-text">select</h1>
-                            <p class="white-text text-left">block text yang ada pada form |
-                                <strong id="select_text">Non select</strong>
-                            </p>
+                        <div class="note note-primary mb-2">
                             <div class="row">
-                                <div class="col-md-12">
-                                    <input id="select_entry" class="form-control mb-2" type="text"
-                                        value="select text yang berada pada form">
+                                <div class="col-sm-6 text-left">
+                                    <h4 class="text-left mx-2">
+                                        .toggle([duration][,complete]);
+                                    </h4>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <h6 class="pt-2 mx-2">tersedia mulai dari versi 1.0</h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 pr-5 pt-5">
-                            <h5 class="white-text text-left mt-5">fungsi select disini untuk mendeteksi ketika ada
-                                elemen html yang terseleksi.
-                            </h5>
-                        </div>
-                    </div>
-                </div>
+                        <p><strong>duration</strong> merupakan lama durasi penggunaan effect, durasi mempunyai nilai
+                            default yaitu 400 jika dituliskan maka akan seperti ini <mark>.toggle(400)</mark>.
+                            Type parameter yang dapat digunakan adalah Number dan String. Contoh untuk penggunaan String
+                            adalah <mark>.toggle("fast")</mark>.
+                            Pada penggunaan parameter string hanya ada dua opsi yaitu <mark>"slow" dan "fast"</mark>.
+                        </p>
+                        <hr>
+                        <p><strong>complete</strong> adalah hal yang akan dilakukan setelah effect selesai diload.
+                            Type yang digunakan dalam pengisian parameter complete yaitu berupa <mark>Function()</mark>.
+                            Nah kita akan coba untuk pengaplikasian pada penggunaan parameter ini
+                        </p>. <br>
 
-                <!-- focus -->
-                <div class="col-md-12 mb-3 card aqua-gradient">
-                    <div class="row">
-                        <div class="col-md-8 px-5 py-5">
-                            <h1 class="ml-1 white-text">focus</h1>
-                            <p class="white-text text-left">masukkan pointer kedalam form |
-                                <strong id="focus_text">Non focus</strong>
-                            </p>
-                            <div class="row">
-                                <div class="col-md-10">
-                                    <input id="focus_entry" class="form-control mb-2" type="text"
-                                        placeholder="masukkan username">
+                        <!-- bassic 2 -->
+                        <div class="card peach-gradient px-5 py-5 mb-4">
+
+                            <!-- bassic 2 display -->
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <h3 id="num_text" class="white-text text-center">DURATION NUMBER</h3>
                                 </div>
-                                <div class="col-md-2">
-                                    <button id="focus_btn" class="btn btn-sm blue-gradient">Submit</button>
+                                <div class="col-md-6">
+                                    <h3 id="str_text" class="white-text text-center">DURATION STRING</h3>
                                 </div>
                             </div>
+                            <!-- /bassic 2 display -->
+
+                            <!-- bassic 2 event -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button id="duration_num" class="btn btn-block purple-gradient">NUM</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button id="duration_str" class="btn btn-block purple-gradient">"STR"</button>
+                                </div>
+                            </div>
+                            <!-- /bassic 2 event -->
                         </div>
-                        <div class="col-md-4 pr-5 pt-5">
-                            <h5 class="white-text text-left mt-5">fungsi focus kebalikan dari blur, yaitu event ketika
-                                pointer masuk kedalam form.
-                            </h5>
+
+                        <!-- bassic 2 jQuery -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <pre id="bassic2" data-type="default">
+                                    <script> 
+                                        $(function(){
+                                            $('#duration_num').click(function(){ //ivent 
+                                                $('#num_text').toggle(750, function(){ //effect param num + option
+                                                    alert('durasi number 750');
+                                                });
+                                            });
+                                            $('#duration_str').click(function(){ //ivent
+                                                $('#str_text').toggle("fast", function(){ //effect param str + option
+                                                    alert('durasi string "fast"');
+                                                }); 
+                                            });
+                                        });
+                                    </script>
+                                </pre>
+                            </div>
                         </div>
+                        <!-- /bassic 2 jQuery -->
                     </div>
+
                 </div>
-
-
-
-                <div class="col-md-12">
-                    <pre id="form" data-type="default">
-                        <script> 
-                            $(function(){   
-                                // blur
-                                $('#blur_entry').on({
-                                    blur:function(){
-                                        $('#blur_text').text('Blur');
-                                    },
-                                    focus:function(){
-                                        $('#blur_text').text('Non blur');
-                                    }
-                                });
-                                 // select
-                                $('#select_entry').on({
-                                    select: function () {
-                                        $('#select_text').text('Selected');
-                                    },
-                                    blur: function () {
-                                        $('#select_text').text('Non select');
-                                        $('#select_entry').val('select text yang berada pada form');
-                                    }
-                                });
-                                // focus
-                                $('#focus_entry').on({
-                                    focus:function(){
-                                        $('#focus_text').text('Focus');
-                                    },
-                                    blur:function(){
-                                        $('#focus_text').text('Non focus');
-                                    }
-                                });
-
-                                $('#focus_btn').click(function(){
-                                    $('#focus_entry').focus(); 
-                                    $('#focus_entry').addClass('is-invalid');
-                                    $('#focus_entry').val('username telah terdaftar');
-                                    $('#focus_entry').blur(function(){
-                                    $('#focus_entry').removeClass('is-invalid');
-                                    $('#focus_entry').val('');
-                                    });
-                                });
-                            });
-                        </script>
-                </div>
+                <!-- /bassic 2 -->
 
             </div>
+            <!-- /bassic -->
         </section>
     </div>
 
@@ -546,7 +346,8 @@
     <script src="asset/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#codebox').syntaxy();
+            $('#bassic').syntaxy();
+            $('#bassic2').syntaxy();
             $('#keyboard').syntaxy();
             $('#form').syntaxy();
         })
